@@ -1,11 +1,14 @@
 package org.example.bowling;
 
 public class Bowling {
-    public void roll(int pins) {
 
+    int score = 0;
+
+    public void roll(int pins) {
+        score += pins;
     }
 
     public Object score() {
-        return 0;
+        return score;
     }
 }
