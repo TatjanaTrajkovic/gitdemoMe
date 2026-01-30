@@ -28,6 +28,19 @@ public class BowlingTest {
 
     }
 
+    @Test
+    void oneSpareGivesScoreTwentyNine(){
+        Bowling bowlingGame = new Bowling();
+        bowlingGame.roll(5);
+        bowlingGame.roll(5);
+        for(int i = 0; i < 18; i++) {
+            bowlingGame.roll(1);
+        }
+
+        assertThat(bowlingGame.score()).isEqualTo(29);
+
+    }
+
 }
 
 //arrange: skapat förberet ett class
