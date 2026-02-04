@@ -12,11 +12,19 @@ public class Bowling {
     }
 
     public Object score() {
+//        int score = 0;
+//        for(int i = 0; i < rolls.length; i+=2){
+//            if(rolls[i] + rolls[i+1] == 10)
+//                score += rolls[i+2];
+//            score += rolls[i];
+//            score += rolls[i+1];
+//        }
         int score = 0;
         for(int i = 0; i < rolls.length; i+=2) {
-            if(isSpare(i)){
+            if(isStrike(i)){
                 score += rolls[i + 2] + rolls[i + 3];
-            }else if(isStrike(i)){
+            }
+            else if(isSpare(i)){
                 score += rolls[i + 2];
             }
             score += rolls[i];
