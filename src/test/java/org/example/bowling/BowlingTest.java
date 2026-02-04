@@ -57,6 +57,16 @@ public class BowlingTest {
 
     }
 
+    @Test
+    void perfectGame(){
+        Bowling bowlingGame = new Bowling();
+        for(int i = 0; i < 12; i++){
+            bowlingGame.roll(10);
+        }
+
+        assertThat(bowlingGame.score()).isEqualTo(300);
+    }
+
 //    @Test
 //    void mock(){
 //
