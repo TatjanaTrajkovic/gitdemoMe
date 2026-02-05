@@ -29,4 +29,10 @@ public class OutfitAdvisorTest {
         String advice = advisor.getClothingAdvice();
         assertThat(advice).isEqualTo("Vinterjacka");
     }
+
+    @Test
+    void summerTemps(){
+        Mockito.when(weatherService.getTemperature()).thenReturn((float) 16.0);
+        assertThat(advisor.getClothingAdvice()).isEqualTo("T-shirt");
+    }
 }
